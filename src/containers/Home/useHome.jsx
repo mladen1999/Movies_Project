@@ -4,7 +4,7 @@ import axios from "axios";
 const useHome = () => {
   const { data } = useContext(SearchContext);
   const [movies, setMovies] = useState([]);
-  // console.log(movies); ,
+  // console.log(movies);
   useEffect(() => {
     (async function () {
       try {
@@ -17,6 +17,17 @@ const useHome = () => {
       }
     })();
   }, [data]);
+  /*
+  useEffect(() => {
+      fetch(`https://fake-movie-database-api.herokuapp.com/api?s=${data}`)
+        .then((res) => res.json())
+        .then((result) => {
+          setMovies(result);
+        });
+    }, [data, movies]);
+    return { movies };
+  };
+  */
 
   return { movies };
 };
