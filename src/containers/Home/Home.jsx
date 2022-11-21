@@ -6,9 +6,7 @@ const Home = () => {
 
   return (
     <div className="cards">
-      {movies.Search?.map(
-        (item) => movies && <Card key={item.imdbID} {...item} />
-      )}
+      {movies?.map((item) => movies && <Card key={item.imdbID} {...item} />)}
     </div>
   );
 };
