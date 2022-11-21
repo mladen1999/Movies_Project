@@ -5,7 +5,7 @@ const Home = () => {
   const { movies } = useHome();
 
   return (
-    <div>
+    <div className="cards">
       {movies.Search?.map(
         (item) => movies && <Card key={item.imdbID} {...item} />
       )}

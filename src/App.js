@@ -5,7 +5,7 @@ import { SearchContextProvider } from "./context/SearchContext";
 
 function App() {
   return (
-    <div>
+    <div className="appCenter">
       <SearchContextProvider>
         <Navbar />
         <Home />
